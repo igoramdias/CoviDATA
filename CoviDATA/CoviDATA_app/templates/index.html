@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CoviDATA - Centralizando e Analisando a COVID-19</title>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+    <body>
+        <div id="top">
+            <h1 style="font-family:monospace , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; float: right; padding: 10px 30px; color: aliceblue;">O seu local de acompanhar e analisar os impactos da COVID-19</h1>
+        </div>
+        
+        <table style="margin: 150px 0px 0px 650px; padding: 10px 10px; background-color:#43b3b72a; border-radius: 5px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">
+                        <button id="numcasos_but">
+                            <a  href="numcasos">Número de Casos</a>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <button id="analicasos_but">
+                            <a href="analicasos">Analisando os Casos</a>  
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <button id="contgast_but">
+                            <a href="controlgastos">Controle de Gastos</a> 
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <img class="imgFront" src="{{ logo.image.url }}">
+        <img class="imgBack" src="{{ brasil.image.url }}">
+    </body>
+</html>

@@ -1,0 +1,40 @@
+/* Layout */
+body {
+    margin: 10px;
+    background-color: rgb(68, 179, 183);
+}
+
+#container {
+    padding-left: 200px;
+    padding-right: 190px;
+}
+
+#container .column {
+    position: relative;
+    float: left;
+}
+
+#center {
+    padding: 10px 10px;
+    width: 100%;
+}
+
+/* Aesthetics */
+body {
+    margin: -10px -10px -10px -10px;
+    padding: 0;
+    font-family:Sans-serif;
+    background-color: rgb(8, 57, 75);
+}
+
+p {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    color: #555;
+}
+
+#header {
+    font-size: large;
+    padding: 0.3em;
+    background: #44b3b7;
+}

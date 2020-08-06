@@ -1,0 +1,63 @@
+body{
+    margin: 10px;
+    background-color: #13536fff;
+}
+a{
+    color: #0060B6;
+    text-decoration: none;
+}
+img{
+    position: absolute;
+}
+.imgFront{
+    top: 120px;
+    left: 0px;
+    width: 20%;
+    z-index: 3;
+}
+.imgBack{
+    top: -10px;
+    left: -10px;
+    height: 100%;
+    z-index: 2;
+}
+#top{
+    margin: -20px -10px 0px -10px;
+    height: 100px;
+    background-color: #43b3b7;
+
+}
+button {
+    color: #1D9AF2;
+    background-color: #292D3E;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 15px 18px 30px 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    box-shadow: 0 0 4px #999;
+    background-position: center;
+    transition: background 0.8s;
+    z-index: 4;
+}
+button:hover {
+    background:#43b3b7 radial-gradient(circle, transparent 1%, #43b3b7 1%) center/15000%;
+    color: white;
+}
+button:active{
+    background-color:#292d3e;
+    background-size: 100%;
+    transition: background 0s;
+}
+#numcasos_but{
+    margin-top: 0px;
+}
+#analicasos_but{
+    margin-top: 25px;
+}
+#contgast_but{
+    margin-top: 25px;
+}
+
+

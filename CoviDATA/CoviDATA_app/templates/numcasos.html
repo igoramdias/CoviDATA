@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CoviDATA | Número de Casos</title>
+        <link rel="stylesheet" href="{% static 'numcasos.css' %}">
+        <meta charset="utf-8">
+        <!-- Viewport Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Brand -->
+            <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../analicasos">Análise dos Casos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../controlgastos">Controle dos Gastos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header id="header"><p>Apresentação do Número de Casos</p></header>        
+
+        <h3 style="margin-top: 10px; padding: 5px;">Brasil</h3>
+        <hr>
+        <table width="100%" cellspacing="10" cellpadding="10" style="margin-top: -20px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Número de Casos</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                    <td style="text-align: center;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Número de Óbitos</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                    <td style="text-align: center;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Recuperados</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                    <td style="text-align: center;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Ranking Mundial</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3 style="margin-top: 10px; padding: 5px;">Estados Brsileiros</h3>
+        <hr>
+        <table id="center_estate" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Número de Casos</th>
+                    <th>Média Móvel de Casos</th>
+                    <th>Número de Óbitos</th>
+                    <th>Média Móvel de Óbitos</th>
+                    <th>Recuperados</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- JavaScript: placed at the end of the document so the pages load faster -->
+		<!-- jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
