@@ -5,29 +5,33 @@
     <head>
         <title>CoviDATA - Centralizando e Analisando a COVID-19</title>
         <link rel="stylesheet" href="{% static 'index.css' %}">
+        <meta charset="utf-8">
+        <!-- Viewport Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <div id="top">
-            <h1 style="font-family:monospace , 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; float: right; padding: 10px 30px; color: aliceblue;">O seu local de acompanhar e analisar os impactos da COVID-19</h1>
+        <div id="top" style="z-index: -3;">
+            <h1 style="float: right; margin-top: 20px;padding: 10px 30px; color: aliceblue; font-size:40px;" class="display-4">O seu local de acompanhar e analisar os impactos da COVID-19</h1>
         </div>
         
-        <table style="margin: 150px 0px 0px 650px; padding: 10px 10px; background-color:#43b3b72a; border-radius: 5px;">
+
+        <h1 style="margin: 150px 0px 20px 470px; color: antiquewhite;" class="display-4"> Escolha sua análise </h1>
+        <hr width="700px" style="margin: -10px 0px 20px 330px !important; background-color:antiquewhite !important;">
+        <table width="50%" cellspacing="10" cellpadding="10" style="margin-left: auto; margin-right: auto; padding: 0px 0px; background-color:#43b3b72a; border-radius: 5px;">
             <tbody>
                 <tr>
                     <td style="text-align: center;">
                         <button id="numcasos_but">
-                            <a  href="numcasos">Número de Casos</a>
+                            <a href="numcasos">Número de Casos</a>
                         </button>
                     </td>
-                </tr>
-                <tr>
                     <td style="text-align: center;">
                         <button id="analicasos_but">
                             <a href="analicasos">Analisando os Casos</a>  
                         </button>
                     </td>
-                </tr>
-                <tr>
                     <td style="text-align: center;">
                         <button id="contgast_but">
                             <a href="controlgastos">Controle de Gastos</a> 
@@ -40,5 +44,17 @@
 
         <img class="imgFront" src="{{ logo.image.url }}">
         <img class="imgBack" src="{{ brasil.image.url }}">
+        <img id="_1" class="covid_1" src="{{ covid_1.image.url }}">
+        <img id="_2" class="covid_1" src="{{ covid_1.image.url }}">
+        <img id="_3" class="covid_1" src="{{ covid_1.image.url }}">
+        <img id="_4" class="covid_2" src="{{ covid_2.image.url }}">
+        <img id="_5" class="covid_2" src="{{ covid_2.image.url }}">
+        <img id="_6" class="covid_2" src="{{ covid_2.image.url }}">
+        <img id="_7" class="covid_2" src="{{ covid_2.image.url }}">
+        <img id="_8" class="covid_3" src="{{ covid_3.image.url }}">
+        <img id="_9" class="covid_3" src="{{ covid_3.image.url }}">
+        <img id="_10" class="covid_3" src="{{ covid_3.image.url }}">
+        <img id="_11" class="covid_3" src="{{ covid_3.image.url }}">
+        <img class="lateral" src="{{ lateral.image.url }}"
     </body>
 </html>

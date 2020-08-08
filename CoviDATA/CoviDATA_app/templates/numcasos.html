@@ -78,7 +78,9 @@
                 </tr>
             </tbody>
         </table>
-        
+
+
+    
         <h1 style="margin-bottom: -5px; padding: 5px; font-size: 40px;" class="display-4">Estados Brasileiros</h1>
         <hr>
         <div id="estate_table"></div>
@@ -95,7 +97,7 @@
             </thead>
             <tbody>
                 {% for estate in estates %}
-                    <tr onclick="input" data-toggle="modal" href="#timeseries" style="cursor: pointer;">
+                    <tr data-toggle="modal" data-target="#timeseries" style="cursor: pointer;" data-estado= "{{ estate.name }}" >
                         <td id="name" style="width: 250px;"> <img src="{{ estate.image.url }}" width="30px" height="20px" style="margin-right: 10px;"> {{ estate.name }} </td>    
                         <td>Cell</td>
                         <td>Cell</td>
@@ -107,42 +109,39 @@
             </tbody>
         </table>
 
-        <!-- The modal -->
-        <div class="modal fade" id="timeseries" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="timeseries" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="modalLabelLarge"></h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     
-                    <div class="modal-body">
-                        Colocar um gráfico com número de casos e média Móvel
-                    </div>
-
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
                 </div>
             </div>
         </div>
 
-        <script>
-            ('#timeseries').on('show.bs.modal', function onclick(element) {
-                //var row = (event.relatedTarget) // Button that triggered the modal
-                //var estate = row.find(".name") // Extract info from data-* attributes
-                estate = document.getElementById("name").innerText;
-                var modal = $(this);
-                modal.find('.modal-title').text(estate);
-                modal.find('.modal-body').val();
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $('#timeseries').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var recipient = button.data('estado') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                modal.find('.modal-title').text(recipient)
+                modal.find('.modal-body').text("Colocar aqui a time serires para o estado do " + recipient)
             })
         </script>
-
-        <!-- JavaScript: placed at the end of the document so the pages load faster -->
-		<!-- jQuery library -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <!-- Popper -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

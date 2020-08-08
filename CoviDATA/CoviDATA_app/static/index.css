@@ -1,6 +1,8 @@
 body{
     margin: 10px;
-    background-color: #13536fff;
+    background-color: #13536fff !important;
+    height: 100%; 
+    overflow: hidden
 }
 a{
     color: #0060B6;
@@ -13,33 +15,104 @@ img{
     top: 120px;
     left: 0px;
     width: 20%;
-    z-index: 3;
+    z-index: 0;
 }
 .imgBack{
     top: -10px;
     left: -10px;
     height: 100%;
+    z-index: -1;
+}
+.covid_1{
+    z-index: -2;
+}
+.covid_2{
+    z-index: 0;
+}
+.covid_3{
     z-index: 2;
 }
+#_1{
+    top: 60%;
+    left: 10%;
+    height: 30%;
+}
+#_2{
+    top: 65%;
+    left: 23%;
+    height: 40%;
+}
+#_3{
+    top: 10%;
+    left: 80%;
+    height: 30%;
+}
+#_4{
+    top: 55%;
+    left: -2%;
+    height: 30%;
+}
+#_5{
+    top: 10%;
+    left: 15%;
+    height: 30%;
+}
+#_6{
+    top: 40%;
+    left: 90%;
+    height: 30%;
+}
+#_7{
+    top: 80%;
+    left: 70%;
+    height: 30%;
+}
+#_8{
+    top: 40%;
+    left: 13%;
+    height: 30%;
+}
+#_9{
+    top: 80%;
+    left: 40%;
+    height: 30%;
+}
+#_10{
+    top: 55%;
+    left: 85%;
+    height: 30%;
+}
+#_11{
+    top: 55%;
+    left: 73%;
+    height: 40%;
+}
+
 #top{
     margin: -20px -10px 0px -10px;
     height: 100px;
-    background-color: #43b3b7;
+    z-index: -2;
 
+}
+.lateral{
+    margin: 10px -20px -20px -100px;
+    padding: 0px;
+    right:0%;
+    top: 28%;
+    z-index: -1;
 }
 button {
     color: #1D9AF2;
     background-color: #292D3E;
     border: 1px solid #1D9AF2;
     border-radius: 4px;
-    padding: 15px 18px 30px 15px;
+    padding: 10px 18px 30px 15px;
     cursor: pointer;
     height: 32px;
     font-size: 14px;
     box-shadow: 0 0 4px #999;
     background-position: center;
     transition: background 0.8s;
-    z-index: 4;
 }
 button:hover {
     background:#43b3b7 radial-gradient(circle, transparent 1%, #43b3b7 1%) center/15000%;
@@ -54,10 +127,12 @@ button:active{
     margin-top: 0px;
 }
 #analicasos_but{
-    margin-top: 25px;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-right: 5px;
 }
 #contgast_but{
-    margin-top: 25px;
+    margin-top: 0px;
 }
 
 
