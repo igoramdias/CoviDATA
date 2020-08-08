@@ -50,28 +50,28 @@
                     <td style="text-align: center; width: 40px;">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Casos</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-body"><h4 class="card-title">{{brasil.casos}}</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Óbitos</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-body"><h4 class="card-title">{{brasil.obitos}}</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Recuperados</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-body"><h4 class="card-title">{{brasil.recuperados}}</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Ranking Mundial</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-body"><h4 class="card-title">2º</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
@@ -92,18 +92,17 @@
                     <th> Média Móvel de Casos </th>
                     <th> Número de Óbitos </th>
                     <th> Média Móvel de Óbitos </th>
-                    <th> Recuperados </th>
                 </tr>
             </thead>
             <tbody>
                 {% for estate in estates %}
                     <tr data-toggle="modal" data-target="#timeseries" style="cursor: pointer;" data-estado= "{{ estate.name }}" >
-                        <td id="name" style="width: 250px;"> <img src="{{ estate.image.url }}" width="30px" height="20px" style="margin-right: 10px;"> {{ estate.name }} </td>    
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
+                        <td id="name" style="width: 250px;"> <img src="../media/{{estate.name}}.png" width="30px" height="20px" style="margin-right: 10px;">
+                            {{ estate.name }} </td>    
+                        <td>{{estate.casos}}</td>
+                        <td>{{estate.media_movel_casos|stringformat:"d"}}</td>
+                        <td>{{estate.obitos}}</td>
+                        <td>{{estate.media_movel_obitos|stringformat:"d"}}</td>
                     </tr>
                 {% endfor %}
             </tbody>

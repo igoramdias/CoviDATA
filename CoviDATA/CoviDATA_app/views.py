@@ -20,7 +20,8 @@ def numcasos(request):
     template = loader.get_template('numcasos.html')
     context = { ## Relacionado com o banco de dados que sera usado para o template em questao
         'logo': illustrate.objects.get(name='logo'),
-        'estates': estate.objects.all(),
+        'estates': estate.objects.all().exclude(name='Brasil').order_by('name'),
+        'brasil': estate.objects.get(name='Brasil')
     }
     return HttpResponse(template.render(context, request))
 
