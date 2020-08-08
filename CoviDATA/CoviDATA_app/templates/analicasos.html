@@ -13,30 +13,53 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-sm navbar-light bg-faded">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Brand -->
-            <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
-            
-            <!-- Links -->
-            <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../numcasos">Número de Casos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../controlgastos">Controle dos Gastos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div style="margin-top: -10px; background-color: #76adaf3b;">
+            <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Brand -->
+                <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
+                
+                <header id="header"><p style="color: rgb(79, 111, 160);">Análise e Predição de Casos</p></header>
 
-        <header id="header"><p>Análise e Predição de Casos</p></header> 
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button id="numcasos_but">
+                                <a class="nav-link" href="../numcasos">Número de Casos</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="contgast_but">
+                                <a class="nav-link" href="../controlgastos">Controle dos Gastos</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
-        
+        <h1 style="margin-bottom: -5px; padding: 5px; font-size: 40px;" class="display-4">O problema...</h1>
+        <hr>
+        <p class="lead" align="justify" style="margin-left: 10px; margin-right: 10px;">
+            Por meio de diversas notícias reportadas em meios de comuniação, nota-se a existência de um fato alarmante na situação de combate
+            da COVID-19 no cenário brasileiro: a subntificação de casos. Tal subnotificação pode causar inúmeras consequências, uma vez que a 
+            falta de controle real da doença não permite que sejam implementadas medidas ao encontro da real necessidade. Diante disso, tem-se 
+            uma análise com a tentativa de estimar o real tamanho do coronavírus no Brasil.
+        </p>
+
+        <h1 style="margin-bottom: -5px; padding: 5px; font-size: 40px;" class="display-4">O problema...</h1>
+        <hr>
+        <p class="lead" align="justify" style="margin-left: 10px; margin-right: 10px;">
+            Por meio de diversas notícias reportadas em meios de comuniação, nota-se a existência de um fato alarmante na situação de combate
+            da COVID-19 no cenário brasileiro: a subntificação de casos. Tal subnotificação pode causar inúmeras consequências, uma vez que a 
+            falta de controle real da doença não permite que sejam implementadas medidas ao encontro da real necessidade. Diante disso, tem-se 
+            uma análise com a tentativa de estimar o real tamanho do coronavírus no Brasil.
+        </p>
+
         <!-- JavaScript: placed at the end of the document so the pages load faster -->
 		<!-- jQuery library -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -13,56 +13,62 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-sm navbar-light bg-faded">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Brand -->
-            <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
-            
-            <!-- Links -->
-            <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../analicasos">Análise dos Casos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../controlgastos">Controle dos Gastos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div style="margin-top: -10px; background-color: #76adaf3b;">
+            <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Brand -->
+                <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
+                
+                <header id="header"><p style="color: rgb(79, 111, 160);">Apresentação do Número de Casos</p></header>
 
-        <header id="header"><p>Apresentação do Número de Casos</p></header>        
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button id="analicasos_but">
+                                <a class="nav-link" href="../analicasos">Análise dos Casos</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="contgast_but">
+                                <a class="nav-link" href="../controlgastos">Controle dos Gastos</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
-        <h3 style="margin-top: 10px; padding: 5px;">Brasil</h3>
+        <h1 style="margin-bottom: -5px; padding: 5px; font-size: 40px;" class="display-4">Brasil</h1>
         <hr>
-        <table width="100%" cellspacing="10" cellpadding="10" style="margin-top: -20px;">
+        <table width="100%" cellspacing="10" cellpadding="10" style="margin-top: -20px; table-layout: fixed;">
             <tbody>
                 <tr>
-                    <td style="text-align: center;">
+                    <td style="text-align: center; width: 40px;">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Casos</h3>
                             <div class="card-body"><h4 class="card-title">999999</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
-                    <td style="text-align: center;">
+                    <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Óbitos</h3>
                             <div class="card-body"><h4 class="card-title">999999</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
-                    <td style="text-align: center;">
+                    <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Recuperados</h3>
                             <div class="card-body"><h4 class="card-title">999999</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
-                    <td style="text-align: center;">
+                    <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Ranking Mundial</h3>
                             <div class="card-body"><h4 class="card-title">999999</h4></div>
@@ -73,40 +79,63 @@
             </tbody>
         </table>
         
-        <h3 style="margin-top: 10px; padding: 5px;">Estados Brsileiros</h3>
+        <h1 style="margin-bottom: -5px; padding: 5px; font-size: 40px;" class="display-4">Estados Brasileiros</h1>
         <hr>
-        <table id="center_estate" class="table table-hover">
+        <div id="estate_table"></div>
+        <table id=center_estate class=table table-hover>
             <thead>
                 <tr>
-                    <th>Estado</th>
-                    <th>Número de Casos</th>
-                    <th>Média Móvel de Casos</th>
-                    <th>Número de Óbitos</th>
-                    <th>Média Móvel de Óbitos</th>
-                    <th>Recuperados</th>
+                    <th> Estado </th>
+                    <th> Número de Casos</th>
+                    <th> Média Móvel de Casos </th>
+                    <th> Número de Óbitos </th>
+                    <th> Média Móvel de Óbitos </th>
+                    <th> Recuperados </th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                </tr>
-            </tfoot>
             <tbody>
-                <tr>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                    <td>Cell</td>
-                </tr>
+                {% for estate in estates %}
+                    <tr onclick="input" data-toggle="modal" href="#timeseries" style="cursor: pointer;">
+                        <td id="name" style="width: 250px;"> <img src="{{ estate.image.url }}" width="30px" height="20px" style="margin-right: 10px;"> {{ estate.name }} </td>    
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
+
+        <!-- The modal -->
+        <div class="modal fade" id="timeseries" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalLabelLarge"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        Colocar um gráfico com número de casos e média Móvel
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            ('#timeseries').on('show.bs.modal', function onclick(element) {
+                //var row = (event.relatedTarget) // Button that triggered the modal
+                //var estate = row.find(".name") // Extract info from data-* attributes
+                estate = document.getElementById("name").innerText;
+                var modal = $(this);
+                modal.find('.modal-title').text(estate);
+                modal.find('.modal-body').val();
+            })
+        </script>
 
         <!-- JavaScript: placed at the end of the document so the pages load faster -->
 		<!-- jQuery library -->

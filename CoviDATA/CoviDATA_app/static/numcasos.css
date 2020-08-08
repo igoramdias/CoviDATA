@@ -34,12 +34,47 @@ p {
 }
 
 #header {
-    font-size: large;
-    padding: 0.3em;
-    background: #44b3b7;
+    font-size: xx-large;
+    padding: 0em;
+    z-index: 1;
 }
+
 
 #center_estate {
     margin-top: 20px;
-    background: #11587c;
+    background: #1c8cc48a;
 }
+
+button {
+    color: rgb(79, 111, 160);
+    background-color: #76adaf83;
+    border: 1px solid #5fb7f5;
+    border-radius: 4px;
+    padding: 3px 3px;
+    cursor: pointer;
+    height: 50px;
+    font-size: 14px;
+    box-shadow: 0 0 4px #999;
+    background-position: center;
+    transition: background 0.8s;
+}
+button:hover {
+    background:#43b3b7 radial-gradient(circle, transparent 1%, #43b3b7 1%) center/15000%;
+    color: white;
+}
+button:active{
+    background-color:#292d3e;
+    background-size: 100%;
+    transition: background 0s;
+}
+#numcasos_but{
+    margin-top: 3px;
+}
+#analicasos_but{
+    margin-top: 3px;
+    margin-right: 20px;
+}
+#contgast_but{
+    margin-top: 3px;
+}
+

@@ -13,30 +13,113 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-sm navbar-light bg-faded">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Brand -->
-            <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
-            
-            <!-- Links -->
-            <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../analicasos">Análise dos Casos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../numcasos">Número de Casos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div style="margin-top: -10px; background-color: #76adaf3b;">
+            <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Brand -->
+                <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
+                
+                <header id="header"><p style="color: rgb(79, 111, 160);">Análise de Gastos Públicos</p></header>
 
-        <header id="header"><p>Análise de Gastos Públicos</p></header> 
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button id="analicasos_but">
+                                <a class="nav-link" href="../analicasos">Análise dos Casos</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="numcasos_but">
+                                <a class="nav-link" href="../numcasos">Número de Casos</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
+        <h3 style="margin-top: 0px; padding: 5px;">Governo Federal</h3>
+        <hr>
+        <table width="700" style="margin-top: -20px; table-layout: fixed; margin-left: auto; margin-right: auto;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center; width: 80px;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Total Investido</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 80px;">
+                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                            <h3 class="card-header">Total Investido</h3>
+                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-footer">Atualizado no dia</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         
+        <h3 style="margin-top: 10px; padding: 5px;">Governo Estaduais</h3>
+        <hr>
+        <table id="center_estate" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Total Gasto</th>
+                    <th>Número de novos Leitos</th>
+                    <th>Número de novos Respiradores</th>
+                    <th>Número de novos Ítens</th>
+                    <th>Recuperados/Total Gasto</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                    <th>Total</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td><label>Cell</label></td>
+                    <td><label>Cell</label></td>
+                    <td><label>Cell</label></td>
+                    <td><label>Cell</label></td>
+                    <td><label>Cell</label></td>
+                    <td><label>Cell</label></td>
+                </tr>
+            </tbody>
+        </table>
+            
+        <!-- The modal -->
+        <div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalLabelLarge">Nome do Estado</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <!-- JavaScript: placed at the end of the document so the pages load faster -->
 		<!-- jQuery library -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
