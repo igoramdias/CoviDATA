@@ -22,14 +22,14 @@
                 <!-- Brand -->
                 <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
                 
-                <header id="header"><p style="color: rgb(79, 111, 160);">Análise de Gastos Públicos</p></header>
+                <header id="header"><p style="color: rgb(79, 111, 160);">Gastos Públicos</p></header>
 
                 <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <button id="analicasos_but">
-                                <a class="nav-link" href="../analicasos">Análise dos Casos</a>
+                            <button id="dicasgerais_but">
+                                <a class="nav-link" href="../dicasgerais">Dicas Gerais</a>
                             </button>
                         </li>
                         <li class="nav-item">
@@ -42,22 +42,15 @@
             </nav>
         </div>
 
-        <h3 style="margin-top: 0px; padding: 5px;">Governo Federal</h3>
+        <h3 style="margin-top: 0px; padding: 5px;">Governos Estaduais</h3>
         <hr>
         <table width="700" style="margin-top: -20px; table-layout: fixed; margin-left: auto; margin-right: auto;">
             <tbody>
                 <tr>
                     <td style="text-align: center; width: 80px;">
-                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
+                        <div class="card" style="max-width: 40rem; margin-top: 20px;">
                             <h3 class="card-header">Total Investido</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
-                            <div class="card-footer">Atualizado no dia</div>
-                        </div>
-                    </td>
-                    <td style="text-align: center; width: 80px;">
-                        <div class="card" style="max-width: 20rem; margin-top: 20px;">
-                            <h3 class="card-header">Total Investido</h3>
-                            <div class="card-body"><h4 class="card-title">999999</h4></div>
+                            <div class="card-body"><h4 class="card-title">R$5.024bi</h4></div>
                             <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
@@ -65,37 +58,50 @@
             </tbody>
         </table>
         
-        <h3 style="margin-top: 10px; padding: 5px;">Governo Estaduais</h3>
+        <h3 style="margin-top: 10px; padding: 5px;">Principais Estados</h3>
         <hr>
         <table id="center_estate" class="table table-hover">
             <thead>
                 <tr>
                     <th>Estado</th>
                     <th>Total Gasto</th>
-                    <th>Número de novos Leitos</th>
-                    <th>Número de novos Respiradores</th>
-                    <th>Número de novos Ítens</th>
-                    <th>Recuperados/Total Gasto</th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                    <th>Total</th>
-                </tr>
-            </tfoot>
             <tbody>
                 <tr onclick="input" data-toggle="modal" href="#largeShoes">
-                    <td><label>Cell</label></td>
-                    <td><label>Cell</label></td>
-                    <td><label>Cell</label></td>
-                    <td><label>Cell</label></td>
-                    <td><label>Cell</label></td>
-                    <td><label>Cell</label></td>
+                    <td id="name" style="width: 1000px;"> <img src="../media/São_Paulo.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>São Paulo</label></td>
+                    <td><label>R$2.70bi</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Pernambuco.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Pernambuco</label></td>
+                    <td><label>R$804M</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Ceará.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Ceará</label></td>
+                    <td><label>R$584M</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Rio de Janeiro.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Rio de Janeiro</label></td>
+                    <td><label>R$516M</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Rondônia.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Rondônia</label></td>
+                    <td><label>R$160M</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Maranhão.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Maranhão</label></td>
+                    <td><label>R$142M</label></td>
+                </tr>
+                <tr onclick="input" data-toggle="modal" href="#largeShoes">
+                    <td id="name" style="width: 1000px;"> <img src="../media/Rio Grande do Norte.png"100px" height="50px" style="margin-right: 10px;">
+                        <label>Rio Grande do Norte</label></td>
+                    <td><label>R$118M</label></td>
                 </tr>
             </tbody>
         </table>
