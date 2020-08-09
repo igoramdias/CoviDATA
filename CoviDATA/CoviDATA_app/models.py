@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 class illustrate(models.Model):
     name = models.CharField(max_length=32)
@@ -6,7 +7,7 @@ class illustrate(models.Model):
 
 class estate(models.Model):
     name = models.CharField(max_length=32)
-   
+    
     casos = models.IntegerField(blank = True, null = True)
     obitos = models.IntegerField(blank = True, null = True)
     recuperados = models.IntegerField(blank = True, null = True)

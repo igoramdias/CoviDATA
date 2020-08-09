@@ -51,28 +51,24 @@
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Casos</h3>
                             <div class="card-body"><h4 class="card-title">{{brasil.casos}}</h4></div>
-                            <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Número de Óbitos</h3>
                             <div class="card-body"><h4 class="card-title">{{brasil.obitos}}</h4></div>
-                            <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Recuperados</h3>
                             <div class="card-body"><h4 class="card-title">{{brasil.recuperados}}</h4></div>
-                            <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                     <td style="text-align: center; width: 40px">
                         <div class="card" style="max-width: 20rem; margin-top: 20px;">
                             <h3 class="card-header">Ranking Mundial</h3>
                             <div class="card-body"><h4 class="card-title">2º</h4></div>
-                            <div class="card-footer">Atualizado no dia</div>
                         </div>
                     </td>
                 </tr>
@@ -118,7 +114,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+                    <img class="img-responsive" style="margin:0 auto; width: 100%;" src="../media/graphs/{{estate.name}}.png">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -135,11 +131,8 @@
             $('#timeseries').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget) // Button that triggered the modal
                 var recipient = button.data('estado') // Extract info from data-* attributes
-                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
                 var modal = $(this)
                 modal.find('.modal-title').text(recipient)
-                modal.find('.modal-body').text("Colocar aqui a time serires para o estado do " + recipient)
             })
         </script>
     </body>
