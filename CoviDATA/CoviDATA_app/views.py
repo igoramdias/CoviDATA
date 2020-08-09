@@ -25,8 +25,8 @@ def numcasos(request):
     }
     return HttpResponse(template.render(context, request))
 
-def analicasos(request):
-    template = loader.get_template('analicasos.html')
+def dicasgerais(request):
+    template = loader.get_template('dicasgerais.html')
     context = { ## Relacionado com o banco de dados que sera usado para o template em questao
         'logo': illustrate.objects.get(name='logo'),
         'estates': estate.objects.all(),
