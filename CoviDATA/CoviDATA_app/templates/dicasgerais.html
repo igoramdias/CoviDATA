@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CoviDATA | Número de Casos</title>
+        <link rel="stylesheet" href="{% static 'analicasos.css' %}">
+        <meta charset="utf-8">
+        <!-- Viewport Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div style="margin-top: -10px; background-color: #76adaf3b;">
+            <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Brand -->
+                <a class="navbar-brand" href="../"><img src="{{ logo.image.url }}" style="width: 20%;"></a>
+                
+                <header id="header"><p style="color: rgb(79, 111, 160);"> Dicas Gerais </p></header>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button id="numcasos_but">
+                                <a class="nav-link" href="../numcasos">Número de Casos</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="contgast_but">
+                                <a class="nav-link" href="../controlgastos">Gastos Públicos</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <table width="100%" cellspacing="10" cellpadding="10" style="margin-top: -20px; table-layout: fixed;">
+            <tbody>
+                <tr>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Lave as mãos!</h4>
+                            <h6 class="card-subtitle text-muted">Lave suas mãos com frequência.</h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/lavarmaos.jpg" alt="Foto de duas mãos lavando" style ="width: 427px; height: 427px">
+                        </div>
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Use alcool em gel!</h4>
+                            <h6 class="card-subtitle text-muted">Use sabão e água ou álcool em gel.</h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/alcoolemgel.jpg" alt="Foto alcool em gel" style ="width: 427px; height: 427px">
+                        </div>
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Mantenha o distanciamento social!</h4>
+                            <h6 class="card-subtitle text-muted">Mantenha uma distância segura de pessoas que estiverem tossindo ou espirrando.</h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/distanciamento.jpg" alt="Foto distanciamento" style ="width: 427px; height: 427px">
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Use máscara!</h4>
+                            <h6 class="card-subtitle text-muted">Use máscara quando não for possível manter o distanciamento físico.
+                            </h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/usemascara.jpg" alt="Foto mascara" style ="width: 427px; height: 427px">
+                        </div>
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Fique em casa!</h4>
+                            <h6 class="card-subtitle text-muted">Fique em casa se você se sentir indisposto.
+                            </h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/ficaremcasa.jpg" alt="Foto casa" style ="width: 427px; height: 427px">
+                        </div>  
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 427px; height: 427px">
+                        <div class="card">
+
+                            <!-- Heading -->
+                            <div class="card-body">
+                            <h4 class="card-title">Procure atendimento!</h4>
+                            <h6 class="card-subtitle text-muted">Procure atendimento médico se tiver febre, tosse e dificuldade para respirar.
+                            </h6>
+                
+                            </div>
+                            
+                            <!-- Image -->
+                            <img src="../media/atendimento.jpg" alt="Foto medico" style ="width: 427px; height: 427px">
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- JavaScript: placed at the end of the document so the pages load faster -->
+		<!-- jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
